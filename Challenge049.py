@@ -1,4 +1,4 @@
-#----------* CHALLENGE 44 *----------
+#----------* CHALLENGE 49 *----------
 # Create a variable called compnum and set the value to 50. Ask the user to enter a number. 
 # While their guess is not the same as the compnum value, tell them if their guess is too low or too 
 # high and ask them to have another guess. If they enter the same value as compnum, display the message 
@@ -6,13 +6,15 @@
 
 compnum = 50
 num = 0
+count = 0
 
 while num != compnum:
     num = int(input("Enter a number: "))
     if num > compnum:
         print("To high!")
+        count = count + 1
     elif num < compnum:
         print("Too low!")
+        count = count + 1
     
-print("You are right! The number is 50")
-
+print("Well done, you took",count+1,"attempts.")
